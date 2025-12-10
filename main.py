@@ -20,18 +20,6 @@
 #    - Scrittura su file
 
 # ===============================
-#   Regex Patterns
-# ===============================
-
-# REGEX_TUTTI_CARATTERI = r'.'           # Tutti i caratteri (usare con re.DOTALL)
-# REGEX_SENZA_SPAZI = r'\S'              # Caratteri esclusi gli spazi
-# REGEX_SOLO_LETTERE = r'[a-zA-ZÀ-ÿ]'   # Solo lettere, incluse accentate
-# REGEX_PAROLE = r'\w+'                  # Parole (lettere, numeri, underscore)
-# REGEX_PAROLE_LETTERE = r'[a-zA-ZÀ-ÿ]+' # Parole composte solo da lettere
-# REGEX_FRASI = r'[^.!?]+[.!?]+'         # Frasi terminate da . ! ?
-
-
-# ===============================
 #   TODO 
 # =============================== 
 
@@ -42,15 +30,18 @@
 
 from ui.console import print_risultato
 from data.services import get_caratteri_len, get_phrase_number, get_text_len_no_space, get_words_number
-from data.repository import get_file_content
+from data.repository import get_data_from_server
+from Constants import URL
 
 def main() -> None:
     try:
-        content: str = get_file_content("text.txt")
+        # content: str = get_file_content("text.txt")
+        content: str = get_data_from_server(URL)
         print_risultato(get_caratteri_len(content), "caratteri")
         print_risultato(get_text_len_no_space(content), "caratteri senza spazi")
         print_risultato(get_words_number(content), "parole")
         print_risultato(get_phrase_number(content), "frasi")
+
 
     except ValueError as e:
         print(f"{e}")

@@ -1,5 +1,6 @@
 
-# REGEX REFERENCE:
+# ================
+# CONFIGURAZIONE COSTANTI
 # ================
 
 # Pattern                 | Descrizione
@@ -23,3 +24,9 @@ REGEX_SOLO_LETTERE = r'[a-zA-ZÀ-ÿ]'    # Solo lettere, incluse accentate
 REGEX_PAROLE = r'\w+'                  # Parole (lettere, numeri, underscore)
 REGEX_PAROLE_LETTERE = r'[a-zA-ZÀ-ÿ]+' # Parole composte solo da lettere
 REGEX_FRASI = r'[^.!?]+[.!?]+'         # Frasi terminate da . ! ?
+
+
+# ===============================
+# URL
+# =============================== 
+URL: str = "https://raw.githubusercontent.com/Elfi91/conta_caretteri/refs/heads/master/text.txt"
