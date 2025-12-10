@@ -23,7 +23,7 @@
 #   TODO 
 # =============================== 
 
-# 1. Migliorare gestione delle eccezzioni
+# 1. Migliorare gestione delle eccezioni
 # 2. Unificare gestione stream e buffer dati 
 # 3. Suddividere in moduli
 

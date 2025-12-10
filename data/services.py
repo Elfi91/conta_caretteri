@@ -2,7 +2,6 @@
 #   Services
 # =============================== 
 
-import re
 from Constants import REGEX_FRASI, REGEX_PAROLE_LETTERE, REGEX_SENZA_SPAZI
 
 def get_caratteri_len(text: str) -> int:
